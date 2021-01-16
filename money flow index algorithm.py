@@ -3,18 +3,20 @@
 Created on Sat Jan 16 21:31:09 2021
 
 @author: egzlz
-"""
-
-"""
-money flow index
+IMPORTANT THINGS TO KNOW:
+I GOT THE DATA FROM YAHOO FINANCE,FOR EXAMPLE APPLE DATA IS IN https://finance.yahoo.com/quote/AAPL/history?p=AAPL
+,whose ticker is AAPL and it is save in my computer as AAPL.csv,in yahoo finance you could find the data of nearly all stock
+remmember to save that csv in the same directory as you are coding
+for english people fichero means file
+explanation of the algorithm:
 volume weighted rsi 
-<20 is overslold ----->buy
->80 overbought---->sell
+value<20 is overslold ----->buy
+value>80 overbought---->sell
 """
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-fichero=pd.read_csv("NNDM.csv")
+fichero=pd.read_csv("AAPL.csv")
 fichero=fichero.set_index("Date")
 plt.figure(figsize=(12.2,4.5))
 plt.plot(fichero["Close"],label="Close")
